@@ -1,16 +1,12 @@
-# utils
+# jimchen/utils
 
-³£ÓÃ¹¤¾ß¼¯
+å¸¸ç”¨å·¥å…·é›†
 
 ## Installing
 
 ```shell
 $ composer require jimchen/utils -vvv
 ```
-
-## Usage
-
-TODO
 
 ## License
 
