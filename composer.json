@@ -2,11 +2,14 @@
     "name": "jimchen/utils",
     "description": "常用工具集",
     "type": "library",
-    "require": {
+    "license": "MIT",
+    "suggest": {
         "ext-mbstring": "*",
         "ext-ctype": "*",
         "ext-json": "*",
-        "ext-simplexml": "*",
+        "ext-simplexml": "*"
+    },
+    "require": {
         "guzzlehttp/guzzle": "^6.3",
         "danielstjules/stringy": "^3.1"
     },
