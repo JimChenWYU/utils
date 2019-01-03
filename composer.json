@@ -1,0 +1,21 @@
+{
+    "name": "jimchen/utils",
+    "description": "常用工具集",
+    "type": "library",
+    "require": {
+        "ext-mbstring": "*",
+        "ext-ctype": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "danielstjules/stringy": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "JimChen\\Utils\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
