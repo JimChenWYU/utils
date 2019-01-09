@@ -196,12 +196,6 @@ class ArrTest extends TestCase
             ],
         ];
         $expect = [
-            20 => [0, 1, 2],
-            30 => [
-                0 => 'c',
-                1 => 'b',
-                2 => 'a',
-            ],
             'repositories' => [
                 ['id' => 0],
                 ['id' => 1],
@@ -217,6 +211,12 @@ class ArrTest extends TestCase
                     'numbers' => [0, 1, 2],
                 ],
             ],
+            20 => [0, 1, 2],
+            30 => [
+                0 => 'c',
+                1 => 'b',
+                2 => 'a',
+            ],
         ];
         $this->assertSame($expect, Arr::sortRecursive($array));
     }
@@ -227,7 +227,7 @@ class ArrTest extends TestCase
         $array = Arr::where($array, function ($key, $value) {
             return is_string($value);
         });
-        $this->assertSame([1 => 200, 3 => 400], $array);
+        $this->assertSame([1 => '200', 3 => '400'], $array);
     }
 
     public function testForget()
