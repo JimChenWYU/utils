@@ -1,5 +1,10 @@
 <?php
 
+namespace JimChen\Utils;
+
+use ArrayAccess;
+use Closure;
+
 if (! function_exists('value')) {
     /**
      * Return the default value of the given value.
