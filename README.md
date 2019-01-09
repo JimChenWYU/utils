@@ -1,6 +1,8 @@
-# jimchen/utils
+# Utils
 
-常用工具集
+[![Build Status](https://www.travis-ci.org/JimChenWYU/utils.svg?branch=master)](https://www.travis-ci.org/JimChenWYU/utils)
+
+**常用工具集**
 
 ## Installing
 
@@ -10,4 +12,4 @@ $ composer require jimchen/utils -vvv
 
 ## License
 
-MIT
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
