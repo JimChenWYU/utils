@@ -31,6 +31,7 @@ trait HasHttpRequest
             'query' => $query,
         ]);
     }
+
     /**
      * Make a post request.
      *
@@ -47,6 +48,7 @@ trait HasHttpRequest
             'form_params' => $params,
         ]);
     }
+
     /**
      * Make a post request with json params.
      *
@@ -63,6 +65,7 @@ trait HasHttpRequest
             'json' => $params,
         ]);
     }
+
     /**
      * Make a http request.
      *
@@ -76,6 +79,7 @@ trait HasHttpRequest
     {
         return $this->unwrapResponse($this->getHttpClient($this->getBaseOptions())->{$method}($endpoint, $options));
     }
+
     /**
      * Return base Guzzle options.
      *
@@ -87,8 +91,10 @@ trait HasHttpRequest
             'base_uri' => method_exists($this, 'getBaseUri') ? $this->getBaseUri() : '',
             'timeout' => method_exists($this, 'getTimeout') ? $this->getTimeout() : 5.0,
         ];
+
         return $options;
     }
+
     /**
      * Return http client.
      *
@@ -102,6 +108,7 @@ trait HasHttpRequest
     {
         return new Client($options);
     }
+
     /**
      * Convert response contents to json.
      *
@@ -118,6 +125,7 @@ trait HasHttpRequest
         } elseif (false !== stripos($contentType, 'xml')) {
             return json_decode(json_encode(simplexml_load_string($contents)), true);
         }
+
         return $contents;
     }
 }

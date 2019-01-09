@@ -34,8 +34,6 @@ class Collection implements ArrayAccess, Arrayable, Jsonable, Countable, Iterato
      * Create a new collection.
      *
      * @param mixed $items
-     *
-     * @return void
      */
     public function __construct($items = [])
     {
@@ -1083,8 +1081,6 @@ class Collection implements ArrayAccess, Arrayable, Jsonable, Countable, Iterato
      *
      * @param mixed $key
      * @param mixed $value
-     *
-     * @return void
      */
     public function offsetSet($key, $value)
     {
@@ -1099,8 +1095,6 @@ class Collection implements ArrayAccess, Arrayable, Jsonable, Countable, Iterato
      * Unset the item at a given offset.
      *
      * @param string $key
-     *
-     * @return void
      */
     public function offsetUnset($key)
     {
