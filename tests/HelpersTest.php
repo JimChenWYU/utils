@@ -11,16 +11,14 @@
 namespace JimChen\Utils\Tests;
 
 use PHPUnit\Framework\TestCase;
-use function JimChen\Utils\data_get;
-use function JimChen\Utils\value;
 
 class HelpersTest extends TestCase
 {
     public function testValue()
     {
-        $this->assertSame('foo', value('foo'));
+        $this->assertSame('foo', \JimChen\Utils\value('foo'));
 
-        $this->assertSame('bar', value(function () {
+        $this->assertSame('bar', \JimChen\Utils\value(function () {
             return 'bar';
         }));
     }
@@ -34,8 +32,8 @@ class HelpersTest extends TestCase
             ],
         ];
 
-        $this->assertSame('bar', data_get($array, 'foo'));
-        $this->assertSame('foobar', data_get($array, 'bar.foo'));
-        $this->assertSame('Hello', data_get($array, 'foobar', 'Hello'));
+        $this->assertSame('bar', \JimChen\Utils\data_get($array, 'foo'));
+        $this->assertSame('foobar', \JimChen\Utils\data_get($array, 'bar.foo'));
+        $this->assertSame('Hello', \JimChen\Utils\data_get($array, 'foobar', 'Hello'));
     }
 }
